@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: steelblue;
+        }
+        div{
+            background-color: palevioletred;
+            border: solid 3px rebeccapurple;
+            text-align: center;
+            font-style: italic;
+
+        }
+        #p{
+            background-color: cyan;
+            text-align: center;
+            border: solid 3px black;
+        }
+        
+    </style>
+    <title>Alert</title>
+</head>
+<body>
+    <div>
+        <h1>SuheelPeerzada</h1>
+    </div>
+    <br>
+    <p id="p">LOGIN/SIGNUP</p><hr>
+    <label for="t">Username</label>
+    <input type="text" id = "t" placeholder="Enter username">
+    <label for="p">Password</label>
+    <input type="password" id="ps" placeholder="Enter password">
+    <input type="checkbox"  onclick="myFunction()">Show Password
+    <script>
+        function myFunction(){
+            var z = document.getElementById("ps");
+           if(z.type == "password"){
+            z.type = "text";
+           }
+           else{
+            z.type= "password";
+           }
+        }
+    </script>
+    <p id="pa"></p>
+    <br><br><button id = "b">Login</button>
+    <br><hr>
+    <p id="p">Dont have an account?</p>
+    <button id="b3">Sign Up</button>
+    <script>
+        document.getElementById("b").onclick=function login(){
+    
+            var x=document.getElementById("t").value;
+            var y=document.getElementById("ps").value;
+            var i;
+            while(1){
+                if(x!=arru[i] && y!= arrp[i])
+                document.getElementById("pa").innerHTML="Invalid Credientials"
+                else
+                document.getElementById("pa").innerHTML="LOGIN SUCCESSFUL!"
+            }
+        }
+        document.getElementById("b3").onclick=function signup(){
+            var arru = new arru();
+            var arrp = new arrp();
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Gallery</title>
+    <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+    <div id="d">
+        <button id="b1" onclick="hidenseek()">View Images</button>
+    </div>
+    <div id="gallery-container" style="display: none;">
+        <button id="prev"><</button>
+                <div id="gallery-images">
+                    <img src="niall.jpg" alt="">
+                    <img src="niall.jpg" alt="">
+                    <img src="niall.jpg" alt="">
+                    <img src="niall.jpg" alt="">
+                    <img src="niall.jpg" alt="">
+                    <img src="niall.jpg" alt="">
+                </div>
+                <button id="next">></button>
+    </div>
+    <script>
+        var galleryCarousel = document.getElementById("gallery-images");
+        var imgon = galleryCarousel.getElementsByTagName("img");
+        var nextImage = document.getElementById("next");
+        var prevImage = document.getElementById("prev");
+        var currentImage = 0;
+        var visibleImages = 3;
+        var galleryContainer = document.getElementById("gallery-container");
+
+        function hidenseek() {
+            if (galleryContainer.style.display === "none") {
+                galleryContainer.style.display = "block";
+                b1.style.display = "none";
+            }
+            b1.addEventListener("click", function () {
+                galleryContainer.classList.toggle("show");
+            });
+        }
+
+        function updateGallery() {
+            for (var i = 0; i < imgon.length; i++) {
+                imgon[i].style.opacity = 0.5;
+                imgon[i].style.transform = "scale(0.8)";
+            }
+
+            imgon[currentImage].style.opacity = 1;
+            imgon[currentImage].style.transform = "scale(1.5)";
+            for (var i = 0; i < imgon.length; i++) {
+                if (i >= currentImage - 1 && i <= currentImage + 1) {
+                    imgon[i].style.display = "block";
+                } else if(imgon[0]!==currentImage){
+                    imgon[i].style.display = "none";
+                }
+            }
+        }
+
+        function carousel(direction) {
+            if (direction === "next" && currentImage < imgon.length - 1) {
+                imgon[currentImage].style.transition = "opacity 0.5s, width 0.5s";
+                currentImage++;
+            } else if (direction === "prev" && currentImage > 0) {
+                imgon[currentImage].style.transition = "opacity 0.5s, width 0.5s";
+                currentImage--;
+            }
+
+            updateGallery();
+        }
+
+        nextImage.onclick = function nextclick() {
+            carousel("next");
+        };
+
+        prevImage.onclick = function prevclick() {
+            carousel("prev");
+        };
+
+        updateGallery();
+    </script>
+
+</body>
+
+</html>

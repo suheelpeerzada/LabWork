@@ -1,0 +1,29 @@
+<html>
+<head> <title> Validation function </title> </head>
+<body>
+<form onsubmit="return validate()" action="message.html">
+<label for="name">Name</label>
+<input type="text" id="name"><br><br>
+<label for="password">Password</label>
+<input type="password" id="pass"><br><br>
+<input type="submit" value="submit">
+</form>
+<script type ="text/javascript">
+    function validate(){
+        var name="NorthCampus";
+        var pass="Lab1";
+        var x=document.getElementById("name").value;
+        var y=document.getElementById("pass").value;
+        if (x == name && y == pass)
+        {
+            alert("Form has been submitted");
+            return true;
+        }
+        else
+        {
+            alert("Invalid credentials, please try again.");
+        return false;
+}}
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Attendance</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: 20px auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <script>
+        // JavaScript function to set the date input field to the current date
+        function setCurrentDate() {
+            var today = new Date();
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var yyyy = today.getFullYear();
+            today = yyyy + '-' + mm + '-' + dd;
+            document.getElementById('date').value = today;
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter Attendance</h1>
+    <form action="insert_attendance.php" method="POST">
+        Student ID: <input type="text" name="student_id"><br><br>
+        Date: <input type="date" name="date" id="date"><br>
+        
+        <table>
+            <tr>
+                <th>Subject</th>
+                <th>Attendance</th>
+            </tr>
+            <tr>
+                <td>Python</td>
+                <td><input type="radio" name="subject1" value="p"> Present
+                    <input type="radio" name="subject1" value="a"> Absent
+                    <input type="radio" name="subject1" value="n"> No Class</td>
+            </tr>
+            <tr>
+                <td>Algorithms</td>
+                <td><input type="radio" name="subject2" value="p"> Present
+                    <input type="radio" name="subject2" value="a"> Absent
+                    <input type="radio" name="subject2" value="n"> No Class</td>
+            </tr>
+            <tr>
+                <td>OS</td>
+                <td><input type="radio" name="subject3" value="p"> Present
+                    <input type="radio" name="subject3" value="a"> Absent
+                    <input type="radio" name="subject3" value="n"> No Class</td>
+            </tr>
+            <tr>
+                <td>Software Engineering</td>
+                <td><input type="radio" name="subject4" value="p"> Present
+                    <input type="radio" name="subject4" value="a"> Absent
+                    <input type="radio" name="subject4" value="n"> No Class</td>
+            </tr>
+            <tr>
+                <td>Microprocessor</td>
+                <td><input type="radio" name="subject5" value="p"> Present
+                    <input type="radio" name="subject5" value="a"> Absent
+                    <input type="radio" name="subject5" value="n"> No Class</td>
+            </tr>
+        </table>
+        
+        <!-- Button to set the date to the current date -->
+        <button type="button" onclick="setCurrentDate()">Set Current Date</button>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

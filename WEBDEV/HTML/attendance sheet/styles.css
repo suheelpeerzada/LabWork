@@ -1,0 +1,97 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 15px 0;
+    margin: 0;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Subject table styles */
+table th {
+    background-color: #0073e6;
+    color: #fff;
+}
+
+/* Radio button styles */
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Date input styles */
+input[type="date"] {
+    width: 100%;
+}
+
+/* Set Current Date button styles */
+button {
+    background-color: #0073e6;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005bb7;
+}
+
+/* Make the form responsive */
+@media screen and (max-width: 600px) {
+    form {
+        padding: 10px;
+    }
+    
+    input[type="date"] {
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+/* Responsive styles for smaller screens */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    th, td {
+        padding: 5px;
+    }
+}

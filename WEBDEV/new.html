@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        #d1{
+            position: fixed;
+            top: 50px;
+            background-color: palevioletred;
+            height: 500px;
+            width: 670px;
+            border-radius: 50px;
+        }
+        #b1{
+            position: relative;
+            left: 300px;
+            top: 200px;
+            height: 35px;
+            width: 35px;
+            border-radius: 100px;
+            background-color: red;
+        }
+        #b1:hover{
+            cursor: pointer;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">
+        <button id="b1"></button>
+    </div>
+    <script>
+        var b1 = document.getElementById("b1");
+        b1.onclick=function{
+            alert("hi");
+        }
+    </script>
+</body>
+</html>

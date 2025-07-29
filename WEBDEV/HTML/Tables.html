@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+
+<body>
+    <h2>MY FORM</h2>
+    <form action="suhu.php">
+    <div>
+        Name: <input type="text" name="myName">
+    </div>
+    <br>
+    <div>
+        ID: <input type="number" name="myID">
+    </div>
+    <br>
+    <div>
+        Email: <input type="email" name="myEmail">
+    </div>
+    <br>
+    <div>
+        Gender:
+        <label for="rad">Male</label>
+        <input type="radio" name="myGender" id="rad"> 
+        <label for="rade">Female</label>
+         <input type="radio" name="myGender" id="rade">
+    </div>
+    <br>
+    <div>
+        <label for="myDistrict">District</label>
+        <select name="myDistrict" id="District">
+        <option value="srg">Srinagar</option>
+        <option value="bla">Baramulla</option>
+        <option value="bud">Budgam</option>
+        <option value="kup">Kupwara</option>
+        <option value="oth">Other</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="check">Above 18</label>
+        <input type="checkbox" id="check" checked>
+    </div>
+    <br>
+    <div>
+        Remarks: <br>
+        <textarea name="REMARKS" cols="30" rows="10"></textarea>
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+</form>
+</body>
+
+</html>
