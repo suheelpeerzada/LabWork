@@ -1,0 +1,13 @@
+def linearSearch(x, a, low, high):
+    i = low
+    while(i<high):
+        if(a[i]==x):
+            return i;
+        elif(i==high and a[i]!=x):
+            print("Not Found!")
+        else:
+            i+=1
+x = 4
+a = [12,34,35,67,56,4,78,54]
+
+print(linearSearch(x,a, 0, 8))
